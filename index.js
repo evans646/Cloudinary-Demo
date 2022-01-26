@@ -1,27 +1,24 @@
-import express from 'express';
+require("dotenv").config();
+const express = require("express");
 const app = express();
-import path from 'path';
-// render html, helps to embed javascript directory inside html
-import 'ejs';
-
-// for parsing application json/x-www-form-urlencoded
-app.use(express.json());
-app.use(express.urlencoded({ extended: true })); 
-
-
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname,'./views'));
-
+const path = require("path");
+require("ejs");
 const port = 8080;
 
-app.get('',(req, res)=>{
-    res.render("home")
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "./views"));
+
+app.get("", (req, res) => {
+  res.render("home");
 });
 
+// code goes here
 
-//code goes here 
 
 
-app.listen(port,() =>{
-    console.log(`Server is listening on port ${port}`)
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
 });
