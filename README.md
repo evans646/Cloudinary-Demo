@@ -6,9 +6,11 @@ Clone this repository
 git clone https://github.com/evans646/Cloudinary-Demo.git
 ```
 
-Install dependencies 
+Change directory and install dependencies 
+
 ```
-npm install 
+cd Cloudinary-Demo && npm install 
+
 ```
 
 Start the server  with 
